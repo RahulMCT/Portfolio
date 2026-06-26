@@ -10,7 +10,7 @@ export const personalInfo = {
   whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || '919304224945',
   whatsappDefaultMessage:
     'Hello Rahul, I came across your portfolio and would like to connect regarding an opportunity.',
-  portfolioUrl: 'https://pprk.github.io/',
+  portfolioUrl: 'https://rahulmct.github.io/',
   github: 'https://github.com/RahulMCT',
   linkedin: 'https://www.linkedin.com/in/rahulkumar-26b2bb171/',
   resumeUrl: '/images/RahulKumar.pdf',
