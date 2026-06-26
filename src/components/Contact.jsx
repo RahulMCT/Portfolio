@@ -75,7 +75,7 @@ export default function Contact() {
     { icon: FaMapMarkerAlt, label: 'Location', value: personalInfo.location },
     { icon: FaLinkedin, label: 'LinkedIn', value: 'rahulkumar', href: personalInfo.linkedin },
     { icon: FaGithub, label: 'GitHub', value: 'RahulMCT', href: personalInfo.github },
-    { icon: FaGlobe, label: 'Portfolio', value: 'rahulmct.github.io', href: personalInfo.portfolioUrl },
+    { icon: FaGlobe, label: 'Portfolio', value: 'rahulmct.github.io/Portfolio', href: personalInfo.portfolioUrl },
   ];
 
   return (

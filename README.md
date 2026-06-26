@@ -2,7 +2,7 @@
 
 Modern, responsive portfolio website built with **React**, **Vite**, and **Framer Motion**, showcasing experience as a Java Full Stack Developer and HxGN EAM Technical Consultant.
 
-**Live:** [https://rahulmct.github.io/](https://rahulmct.github.io/)
+**Live:** [https://rahulmct.github.io/Portfolio/](https://rahulmct.github.io/Portfolio/)
 
 ## Features
 
