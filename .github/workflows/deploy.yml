@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths-ignore:
       - 'docs/**'
+      - 'assets/**'
+      - 'images/**'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - '.nojekyll'
   workflow_dispatch:
 
 permissions:
@@ -45,12 +50,25 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
 
-      - name: Deploy built site to docs folder on main
+      - name: Publish built site to repository root
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp dist/index.html index.html
+          rm -rf assets images
+          cp -r dist/assets assets
+          cp -r dist/images images
+          cp dist/robots.txt robots.txt
+          cp dist/sitemap.xml sitemap.xml
+          cp dist/.nojekyll .nojekyll
+          git add index.html assets images robots.txt sitemap.xml .nojekyll
+          git diff --staged --quiet || git commit -m "Publish built site to root [skip ci]"
+          git push origin HEAD:main
+
+      - name: Publish built site to docs folder
+        run: |
           rm -rf docs
           cp -r dist docs
           git add docs
-          git diff --staged --quiet || git commit -m "Deploy site to docs folder [skip ci]"
+          git diff --staged --quiet || git commit -m "Publish built site to docs [skip ci]"
           git push origin HEAD:main
