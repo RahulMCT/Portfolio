@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assetUrl';
+
 export const personalInfo = {
   name: 'Rahul Kumar',
   title: 'Java Full Stack Developer | HxGN EAM Technical Consultant',
@@ -13,9 +15,9 @@ export const personalInfo = {
   portfolioUrl: 'https://rahulmct.github.io/Portfolio/',
   github: 'https://github.com/RahulMCT',
   linkedin: 'https://www.linkedin.com/in/rahulkumar-26b2bb171/',
-  resumeUrl: '/images/RahulKumar.pdf',
-  profileImage: '/images/IMG_20211010_220625.jpg',
-  logoImage: '/images/Icons.jfif',
+  resumeUrl: assetUrl('images/RahulKumar.pdf'),
+  profileImage: assetUrl('images/IMG_20211010_220625.jpg'),
+  logoImage: assetUrl('images/Icons.jfif'),
   typingRoles: [
     'Java Full Stack Developer',
     'HxGN EAM Consultant',
@@ -221,7 +223,7 @@ export const projects = [
       'Provided production support for live deployments.',
     ],
     github: 'https://github.com/RahulMCT',
-    image: '/images/portfolio-banner.png',
+    image: assetUrl('images/portfolio-banner.png'),
   },
   {
     title: 'MVP Talent Market',
