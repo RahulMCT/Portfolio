@@ -62,9 +62,16 @@ npm run preview
 
 ## Deployment
 
-Push to the `main` branch — GitHub Actions builds and deploys automatically to GitHub Pages.
+Push to the `main` branch — GitHub Actions builds and deploys to the `gh-pages` branch.
 
-Ensure **Settings → Pages → Source** is set to **GitHub Actions**.
+### Enable GitHub Pages (one-time setup)
+
+1. Open **https://github.com/RahulMCT/Portfolio/settings/pages**
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. **Branch:** `gh-pages` → folder **`/ (root)`** → **Save**
+4. Wait 1–2 minutes, then open **https://rahulmct.github.io/Portfolio/**
+
+If the workflow has not run yet, go to **Actions** → **Deploy to GitHub Pages** → **Run workflow**.
 
 ## Project Structure
 
